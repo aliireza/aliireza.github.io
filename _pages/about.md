@@ -14,7 +14,7 @@ I am a doctoral student in the Network Systems Laboratory ([NSLab](https://www.k
 
 Research
 ======
-My research interests include computer networks, computer architecture, and compilers. During my doctoral studies, I am trying to improve the performance of Network Function Virtualization (NFV) service chains by using low-level optimization techniques. You can read more in my [licentiate thesis](http://kth.diva-portal.org/smash/record.jsf?pid=diva2%3A1305108&dswid=947).
+My research interests include computer networks and networked systems. During my doctoral studies, I am trying to improve the performance of Network Function Virtualization (NFV) service chains by using low-level optimization techniques. You can read more in my [licentiate thesis](http://kth.diva-portal.org/smash/record.jsf?pid=diva2%3A1305108&dswid=947).
 
 ---
 
