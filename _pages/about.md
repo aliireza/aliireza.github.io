@@ -30,8 +30,6 @@ Selected Publications
 <br />
 <br />
 We present [PacketMill](https://packetmill.io/)), a system for optimizing software packet processing, which (i) introduces a new model to efficiently manage packet metadata and (ii) employs code-optimization techniques to better utilize commodity hardware. PacketMill grinds the whole packet processing stack, from the high-level network function configuration file to the low-level userspace network (specifically DPDK) drivers, to mitigate inefficiencies and produce a customized binary for a given network function. Our evaluation results show that PacketMill increases throughput (up to 36.4 Gbps - 70%) & reduces latency (up to 101 us - 28%) and enables nontrivial packet processing (e.g., router) at ≈100 Gbps, when new packets arrive >10× faster than main memory access times, while using only one processing core.
-
-<br />
 <br />
 
 - Reexamining Direct Cache Access to Optimize I/O Intensive Applications for Multi-hundred-gigabit Networks ([ATC'20](https://www.usenix.org/conference/atc20))
@@ -45,7 +43,6 @@ We present [PacketMill](https://packetmill.io/)), a system for optimizing softwa
 <br />
 <br />
 We study the current implementation of Direct Cache Access (DCA) in Intel processors, called Data Direct I/O (DDIO) technology. Our paper shows that it is important to understand the details of DDIO and to tune/optimize it appropriately for a given Internet service to achieve high-performance, especially with the introduction of multi-hundred-gigabit networks.
-<br />
 <br />
 
 - Make the Most out of Last Level Cache in Intel Processors ([EuroSys'19](https://eurosys2019.org/))
