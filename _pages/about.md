@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a doctoral student in the Network Systems Laboratory ([NSLab](https://www.kth.se/cos/research/nslab/network-systems-laboratory-1.621857)) at KTH Royal Institute of Technology and I am doing research under the supervision of Professor [Dejan Kostic](https://people.kth.se/~dejanko/) and Professor [Gerald Q. Maguire Jr.](https://people.kth.se/~maguire/) I have received my B.Sc. in Electrical Engineering (Electronics) from [Sharif University of Technology](http://www.en.sharif.edu/), Tehran, Iran and My M.Sc. in Electrical Engineering (Digital Electronic Systems) from [Amirkabir University of Technology](https://aut.ac.ir/en), Tehran, Iran.
+I am a doctoral student in the Network Systems Laboratory ([NSLab](https://www.kth.se/blogs/nslab/)) at KTH Royal Institute of Technology and I am doing research under the supervision of Professor [Dejan Kostic](https://people.kth.se/~dejanko/) and Professor [Gerald Q. Maguire Jr.](https://people.kth.se/~maguire/) I have received my B.Sc. in Electrical Engineering (Electronics) from [Sharif University of Technology](http://www.en.sharif.edu/), Tehran, Iran and My M.Sc. in Electrical Engineering (Digital Electronic Systems) from [Amirkabir University of Technology](https://aut.ac.ir/en), Tehran, Iran.
 
 ---
 
@@ -27,9 +27,11 @@ Selected Publications
 <br />
 [[Paper]](https://people.kth.se/~farshin/documents/packetmill-asplos21.pdf)
 [[Extended Abstract]](https://people.kth.se/~farshin/documents/packetmill-asplos21-extended_abstract.pdf)
+[[Slides]](https://people.kth.se/~farshin/documents/packetmill-asplos21-slides.pdf)
+[[Video]](https://play.kth.se/media/PacketMillA+Toward+Per-Core+100-Gbps+Networking/0_7rvtusfo)
 <br />
 <br />
-We present [PacketMill](https://packetmill.io/)), a system for optimizing software packet processing, which (i) introduces a new model to efficiently manage packet metadata and (ii) employs code-optimization techniques to better utilize commodity hardware. PacketMill grinds the whole packet processing stack, from the high-level network function configuration file to the low-level userspace network (specifically DPDK) drivers, to mitigate inefficiencies and produce a customized binary for a given network function. Our evaluation results show that PacketMill increases throughput (up to 36.4 Gbps - 70%) & reduces latency (up to 101 us - 28%) and enables nontrivial packet processing (e.g., router) at ≈100 Gbps, when new packets arrive >10× faster than main memory access times, while using only one processing core.
+We present [PacketMill](https://packetmill.io/), a system for optimizing software packet processing, which (i) introduces a new model to efficiently manage packet metadata and (ii) employs code-optimization techniques to better utilize commodity hardware. PacketMill grinds the whole packet processing stack, from the high-level network function configuration file to the low-level userspace network (specifically DPDK) drivers, to mitigate inefficiencies and produce a customized binary for a given network function. Our evaluation results show that PacketMill increases throughput (up to 36.4 Gbps - 70%) & reduces latency (up to 101 us - 28%) and enables nontrivial packet processing (e.g., router) at ≈100 Gbps, when new packets arrive >10× faster than main memory access times, while using only one processing core.
 <br />
 
 - Reexamining Direct Cache Access to Optimize I/O Intensive Applications for Multi-hundred-gigabit Networks ([ATC'20](https://www.usenix.org/conference/atc20))
