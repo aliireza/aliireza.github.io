@@ -10,6 +10,11 @@ redirect_from:
 
 I am a doctoral student in the Network Systems Laboratory ([NSLab](https://www.kth.se/blogs/nslab/)) at KTH Royal Institute of Technology and I am doing research under the supervision of Professor [Dejan Kostic](https://people.kth.se/~dejanko/) and Professor [Gerald Q. Maguire Jr.](https://people.kth.se/~maguire/) I have received my B.Sc. in Electrical Engineering (Electronics) from [Sharif University of Technology](http://www.en.sharif.edu/), Tehran, Iran and My M.Sc. in Electrical Engineering (Digital Electronic Systems) from [Amirkabir University of Technology](https://aut.ac.ir/en), Tehran, Iran.
 
+For more information, please check my <img src="https://github.com/FortAwesome/Font-Awesome/blob/6.x/svgs/solid/file-lines.svg" height="1em">[résumé](https://aliireza.github.io/files/AlirezaFarshin_resume.pdf) or full <img src="https://github.com/FortAwesome/Font-Awesome/blob/6.x/svgs/solid/book.svg" height="1em">[CV](https://aliireza.github.io/files/AlirezaFarshin_CV.pdf).
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/A7A4nEXrm3s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ---
 
 Research
@@ -25,9 +30,9 @@ Selected Publications
 <br />
 (Alireza Farshin, Tom Barbette, Amir Roozbeh, Gerald Q. Maguire Jr., and Dejan Kostic)
 <br />
-[[Paper]](https://people.kth.se/~farshin/documents/packetmill-asplos21.pdf)
-[[Extended Abstract]](https://people.kth.se/~farshin/documents/packetmill-asplos21-extended_abstract.pdf)
-[[Slides]](https://people.kth.se/~farshin/documents/packetmill-asplos21-slides.pdf)
+[[Paper]](https://aliireza.github.io/files/packetmill-asplos21.pdf)
+[[Extended Abstract]](https://aliireza.github.io/files/packetmill-asplos21-extended_abstract.pdf)
+[[Slides]](https://aliireza.github.io/files/packetmill-asplos21-slides.pdf)
 [[Video]](https://play.kth.se/media/PacketMillA+Toward+Per-Core+100-Gbps+Networking/0_7rvtusfo)
 <br />
 <br />
@@ -38,8 +43,8 @@ We present [PacketMill](https://packetmill.io/), a system for optimizing softwar
 <br />
 (Alireza Farshin, Amir Roozbeh, Gerald Q. Maguire Jr., and Dejan Kostic)
 <br />
-[[Paper]](https://people.kth.se/~farshin/documents/ddio-atc20.pdf)
-[[Slides]](https://people.kth.se/~farshin/documents/ddio-atc20-slides.pdf)
+[[Paper]](https://aliireza.github.io/files/ddio-atc20.pdf)
+[[Slides]](https://aliireza.github.io/files/ddio-atc20-slides.pdf)
 [[Poster]](http://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1426845&dswid=5214)
 [[Video]](https://people.kth.se/~farshin/documents/ddio-atc20-video.mp4)
 <br />
