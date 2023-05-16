@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a doctoral student in the Network Systems Laboratory ([NSLab](https://www.kth.se/blogs/nslab/)) at KTH Royal Institute of Technology and I am doing research under the supervision of Professor [Dejan Kostic](https://dejankosticgithub.github.io/index.html) and Professor [Gerald Q. Maguire Jr.](https://people.kth.se/~maguire/) I have received my B.Sc. in Electrical Engineering (Electronics) from [Sharif University of Technology](http://www.en.sharif.edu/), Tehran, Iran and my M.Sc. in Electrical Engineering (Digital Electronic Systems) from [Amirkabir University of Technology](https://aut.ac.ir/en), Tehran, Iran.
+I am a researcher in the Network Systems Laboratory ([NSLab](https://www.kth.se/blogs/nslab/)) at KTH Royal Institute of Technology. I completed my doctoral studies in the same group under the supervision of Professor [Dejan Kostic](https://dejankosticgithub.github.io/index.html) and Professor [Gerald Q. Maguire Jr.](https://people.kth.se/~maguire/) I have received my B.Sc. in Electrical Engineering (Electronics) from [Sharif University of Technology](http://www.en.sharif.edu/), Tehran, Iran and my M.Sc. in Electrical Engineering (Digital Electronic Systems) from [Amirkabir University of Technology](https://aut.ac.ir/en), Tehran, Iran.
 
 For more information, please check my [résumé](https://aliireza.github.io/files/AlirezaFarshin_resume.pdf) or full [CV](https://aliireza.github.io/files/AlirezaFarshin_CV.pdf).
 
@@ -21,12 +21,23 @@ I have received a [Google Ph.D. Fellowship 2021](https://research.google/outreac
 
 Research
 ======
-My research interests include computer networks and networked systems. During my doctoral studies, I am trying to improve the performance of Network Function Virtualization (NFV) service chains by using low-level optimization techniques. You can read more in my [licentiate thesis](http://kth.diva-portal.org/smash/record.jsf?pid=diva2%3A1305108&dswid=947). To read the highlight of my research in Swedish, please check the [Framtidens Forskning](https://framtidensforskning.se/2022/06/17/optimerar-cacheminnet-for-snabbare-internettjanster/)'s article called "Optimerar cacheminnet för snabbare internettjänster".
+My research interests include computer networks and networked systems. During my doctoral studies, I improved the performance of Network Functions Virtualization (NFV) service chains running at 100/200 Gbps by using low-level optimization techniques. You can read more in my [licentiate thesis](http://kth.diva-portal.org/smash/record.jsf?pid=diva2%3A1305108&dswid=947) and [doctoral dissertation](http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-323599). To read the highlight of my research in Swedish, please check the [Framtidens Forskning](https://framtidensforskning.se/2022/06/17/optimerar-cacheminnet-for-snabbare-internettjanster/)'s article called "Optimerar cacheminnet för snabbare internettjänster".
 
 ---
 
 Selected Publications
 ======
+
+- **Overcoming the IOTLB wall for multi-100-Gbps Linux-based networking ([PeerJ CS](https://peerj.com/computer-science/))**
+<br />
+**Alireza Farshin**, Luigi Rizzo, Khaled Elmeleegy, Dejan Kostić
+<br />
+[[Paper]](https://aliireza.github.io/files/iotlb-peerj23.pdf)
+[[Reviews]](https://peerj.com/articles/cs-1385/reviews/)
+<br />
+<br />
+We (i) characterize the performance of IOMMU & IOTLB on recent Intel Xeon Scalable & AMD EPYC processors at 200 Gbps and (ii) explore the possible opportunities to mitigate its performance overheads in the Linux kernel. Our evaluation shows that using hugepage-backed buffers can completely recover up-to-20-percent throughput drop introduced by IOMMU. 
+<br />
 
 - **Packet Order Matters! Improving Application Performance by Deliberately Delaying Packets ([NSDI'22](https://www.usenix.org/conference/nsdi22))**
 <br />
