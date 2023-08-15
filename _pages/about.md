@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a researcher in the Network Systems Laboratory ([NSLab](https://www.kth.se/blogs/nslab/)) at KTH Royal Institute of Technology. I completed my doctoral studies in the same group under the supervision of Professor [Dejan Kostic](https://dejankosticgithub.github.io/index.html) and Professor [Gerald Q. Maguire Jr.](https://people.kth.se/~maguire/) I have received my B.Sc. in Electrical Engineering (Electronics) from [Sharif University of Technology](http://www.en.sharif.edu/), Tehran, Iran and my M.Sc. in Electrical Engineering (Digital Electronic Systems) from [Amirkabir University of Technology](https://aut.ac.ir/en), Tehran, Iran.
+I am a Senior Researcher in the Connected Intelligence unit at RISE. Before joining RISE, I was a postdoctoral researcher in the Network Systems Laboratory ([NSLab](https://www.kth.se/blogs/nslab/)) at KTH Royal Institute of Technology. I completed my doctoral studies in the same group under the supervision of Professor [Dejan Kostic](https://dejankosticgithub.github.io/index.html) and Professor [Gerald Q. Maguire Jr.](https://people.kth.se/~maguire/) I have received my B.Sc. in Electrical Engineering (Electronics) from [Sharif University of Technology](http://www.en.sharif.edu/), Tehran, Iran and my M.Sc. in Electrical Engineering (Digital Electronic Systems) from [Amirkabir University of Technology](https://aut.ac.ir/en), Tehran, Iran.
 
 For more information, please check my [résumé](https://aliireza.github.io/files/AlirezaFarshin_resume.pdf) or full [CV](https://aliireza.github.io/files/AlirezaFarshin_CV.pdf).
 
@@ -21,7 +21,7 @@ I have received a [Google Ph.D. Fellowship 2021](https://research.google/outreac
 
 Research
 ======
-My research interests include computer networks and networked systems. During my doctoral studies, I improved the performance of Network Functions Virtualization (NFV) service chains running at 100/200 Gbps by using low-level optimization techniques. You can read more in my [licentiate thesis](http://kth.diva-portal.org/smash/record.jsf?pid=diva2%3A1305108&dswid=947) and [doctoral dissertation](http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-323599). To read the highlight of my research in Swedish, please check the [Framtidens Forskning](https://framtidensforskning.se/2022/06/17/optimerar-cacheminnet-for-snabbare-internettjanster/)'s article called "Optimerar cacheminnet för snabbare internettjänster".
+My research interests include computer networks, networked systems, and artificial intelligence. During my doctoral studies, I improved the performance of Network Functions Virtualization (NFV) service chains running at 100/200 Gbps by using low-level optimization techniques. You can read more in my [licentiate thesis](http://kth.diva-portal.org/smash/record.jsf?pid=diva2%3A1305108&dswid=947) and [doctoral dissertation](http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-323599). To read the highlight of my research in Swedish, please check the [Framtidens Forskning](https://framtidensforskning.se/2022/06/17/optimerar-cacheminnet-for-snabbare-internettjanster/)'s article called "Optimerar cacheminnet för snabbare internettjänster".
 
 ---
 
