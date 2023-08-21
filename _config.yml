@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Alireza Farshin"
 title_separator          : "-"
 name                     : &name "Alireza Farshin"
-description              : &description "Doctoral student, Communication Systems Department, KTH Royal Institute of Technology"
+description              : &description "Senior Researcher, Networked Systems"
 url                      : https://aliireza.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "aliireza/aliireza.github.io"
@@ -87,7 +87,7 @@ author:
   employer         :
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=cfCpKWwAAAAJ&hl=en"
-  email            :  "farshin@kth.se"
+  email            :  "alireza.farshin@ri.se"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
