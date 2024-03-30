@@ -25,8 +25,18 @@ My research interests include computer networks and networked systems. During my
 
 ---
 
-Selected Publications
+Publications
 ======
+
+- **Deploying Stateful Network Functions Efficiently using Large Language Models ([EuroMLSys'24](https://euromlsys.eu/))**
+<br />
+Hamid Ghasemirahni, **Alireza Farshin**, Mariano Scazzariello, Marco Chiesa, Dejan Kostić
+<br />
+[[Paper]](https://aliireza.github.io/files/flowmage-euromlsys24.pdf)
+<br />
+<br />
+We use large language models (LLMs) to extract useful information from stateful network functions and find the optimal RSS configuration to minmize shared memory accesses.
+<br />
 
 - **Overcoming the IOTLB wall for multi-100-Gbps Linux-based networking ([PeerJ CS](https://peerj.com/computer-science/))**
 <br />
