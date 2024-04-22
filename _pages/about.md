@@ -33,6 +33,7 @@ Publications
 Hamid Ghasemirahni, **Alireza Farshin**, Mariano Scazzariello, Marco Chiesa, Dejan Kostić
 <br />
 [[Paper]](https://aliireza.github.io/files/flowmage-euromlsys24.pdf)
+[[Slides]](https://aliireza.github.io/files/flowmage-euromlsys24-slides.pdf)
 <br />
 <br />
 We use large language models (LLMs) to extract useful information from stateful network functions and find the optimal RSS configuration to minmize shared memory accesses.
