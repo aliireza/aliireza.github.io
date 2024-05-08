@@ -28,6 +28,18 @@ My research interests include computer networks and networked systems. During my
 Publications
 ======
 
+- **NetConfEval: Can LLMs Facilitate Network Configuration? ([CoNEXT'24](https://conferences.sigcomm.org/co-next/2024/#!/home))**
+<br />
+Changjie Wang, Mariano Scazzariello, **Alireza Farshin**, Simone Ferlin, Dejan Kostić, Marco Chiesa
+<br />
+[[Paper]](https://aliireza.github.io/files/netconfeval-conext24.pdf)
+[[GitHub Repository]](https://github.com/NetConfEval/NetConfEval)
+[[HuggingFace Dataset]](https://huggingface.co/datasets/NetConfEval/NetConfEval)
+<br />
+<br />
+We propose a benchmark, called NetConfEval, to quantify the benefits and challenges of using Large Language Models (LLMs) for configuring networks.
+<br />
+
 - **Deploying Stateful Network Functions Efficiently using Large Language Models ([EuroMLSys'24](https://euromlsys.eu/))**
 <br />
 Hamid Ghasemirahni, **Alireza Farshin**, Mariano Scazzariello, Marco Chiesa, Dejan Kostić
