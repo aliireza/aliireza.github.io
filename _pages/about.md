@@ -28,6 +28,15 @@ My research interests include computer networks and networked systems. During my
 Publications
 ======
 
+- **FAJITA: Stateful Packet Processing at 100 Million pps ([CoNEXT'24](https://conferences.sigcomm.org/co-next/2024/#!/home))**
+<br />
+Hamid Ghasemirahni, **Alireza Farshin**, Mariano Scazzariello, Gerald Q. Maguire Jr., Dejan Kostić, Marco Chiesa
+<br />
+<br />
+<br />
+FAJITA proposes an optimized processing pipeline for stateful network functions to minimize memory accesses and overcome the overheads of accessing shared data structures while ensuring efficient batch processing at every stage of the pipeline.
+<br />
+
 - **NetConfEval: Can LLMs Facilitate Network Configuration? ([CoNEXT'24](https://conferences.sigcomm.org/co-next/2024/#!/home))**
 <br />
 Changjie Wang, Mariano Scazzariello, **Alireza Farshin**, Simone Ferlin, Dejan Kostić, Marco Chiesa
