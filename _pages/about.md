@@ -32,6 +32,7 @@ Publications
 <br />
 Hamid Ghasemirahni, **Alireza Farshin**, Mariano Scazzariello, Gerald Q. Maguire Jr., Dejan Kostić, Marco Chiesa
 <br />
+[[Paper]](https://aliireza.github.io/files/fajita-conext24.pdf)
 <br />
 <br />
 FAJITA proposes an optimized processing pipeline for stateful network functions to minimize memory accesses and overcome the overheads of accessing shared data structures while ensuring efficient batch processing at every stage of the pipeline.
