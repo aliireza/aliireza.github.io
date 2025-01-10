@@ -12,21 +12,27 @@ I am a distributed systems researcher at NVIDIA. Before joining NVIDIA, I was a 
 
 For more information, please check my [résumé](https://aliireza.github.io/files/AlirezaFarshin_resume.pdf) or full [CV](https://aliireza.github.io/files/AlirezaFarshin_CV.pdf).
 
-I have received a [Google Ph.D. Fellowship 2021](https://research.google/outreach/phd-fellowship/recipients/?category=2021) award in Systems and Networking, check [my interview](https://intra.kth.se/en/eecs/aktuellt-pa-eecs/nyheter/vinnare-av-google-phd-fellowship-2021-1.1104113) with KTH EECS.
+---
 
+Research
+======
+My research interests include computer networks and networked systems. During my doctoral studies, I improved the performance of Network Functions Virtualization (NFV) service chains running at 100/200 Gbps by using low-level optimization techniques. I received a [Google Ph.D. Fellowship 2021](https://research.google/outreach/phd-fellowship/recipients/?category=2021) award in Systems and Networking during my doctoral studies, check [my interview](https://intra.kth.se/en/eecs/aktuellt-pa-eecs/nyheter/vinnare-av-google-phd-fellowship-2021-1.1104113) with KTH EECS. You can read more in my [licentiate thesis](http://kth.diva-portal.org/smash/record.jsf?pid=diva2%3A1305108&dswid=947) and [doctoral dissertation](http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-323599). To read the highlight of my research in Swedish, please check the [Framtidens Forskning](https://framtidensforskning.se/2022/06/17/optimerar-cacheminnet-for-snabbare-internettjanster/)'s article called "Optimerar cacheminnet för snabbare internettjänster".
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/A7A4nEXrm3s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 
-Research
-======
-My research interests include computer networks and networked systems. During my doctoral studies, I improved the performance of Network Functions Virtualization (NFV) service chains running at 100/200 Gbps by using low-level optimization techniques. You can read more in my [licentiate thesis](http://kth.diva-portal.org/smash/record.jsf?pid=diva2%3A1305108&dswid=947) and [doctoral dissertation](http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-323599). To read the highlight of my research in Swedish, please check the [Framtidens Forskning](https://framtidensforskning.se/2022/06/17/optimerar-cacheminnet-for-snabbare-internettjanster/)'s article called "Optimerar cacheminnet för snabbare internettjänster".
-
----
-
 Publications
 ======
+
+- **Deriving Coding-Specific Sub-Models from LLMs using Resource-Efficient Pruning ([LLM4Code'25](https://llm4code.github.io/))**
+<br />
+Laura Puccioni, **Alireza Farshin**, Mariano Scazzariello, Changjie Wang, Marco Chiesa, Dejan Kostić
+<br />
+[[Paper]](https://arxiv.org/abs/2501.05248)
+<br />
+<br />
+<br />
 
 - **FAJITA: Stateful Packet Processing at 100 Million pps ([CoNEXT'24](https://conferences.sigcomm.org/co-next/2024/#!/home))**
 <br />
@@ -35,19 +41,19 @@ Hamid Ghasemirahni, **Alireza Farshin**, Mariano Scazzariello, Gerald Q. Maguire
 [[Paper]](https://aliireza.github.io/files/fajita-conext24.pdf)
 <br />
 <br />
-FAJITA proposes an optimized processing pipeline for stateful network functions to minimize memory accesses and overcome the overheads of accessing shared data structures while ensuring efficient batch processing at every stage of the pipeline.
 <br />
 
 - **NetConfEval: Can LLMs Facilitate Network Configuration? ([CoNEXT'24](https://conferences.sigcomm.org/co-next/2024/#!/home))**
 <br />
 Changjie Wang, Mariano Scazzariello, **Alireza Farshin**, Simone Ferlin, Dejan Kostić, Marco Chiesa
 <br />
+**[🏅IRTF/IETF [ANRP 2025](https://www.irtf.org/anrp/) Winner!]**
+<br />
 [[Paper]](https://aliireza.github.io/files/netconfeval-conext24.pdf)
 [[GitHub Repository]](https://github.com/NetConfEval/NetConfEval)
 [[HuggingFace Dataset]](https://huggingface.co/datasets/NetConfEval/NetConfEval)
 <br />
 <br />
-We propose a benchmark, called NetConfEval, to quantify the benefits and challenges of using Large Language Models (LLMs) for configuring networks.
 <br />
 
 - **Deploying Stateful Network Functions Efficiently using Large Language Models ([EuroMLSys'24](https://euromlsys.eu/))**
@@ -58,7 +64,6 @@ Hamid Ghasemirahni, **Alireza Farshin**, Mariano Scazzariello, Marco Chiesa, Dej
 [[Slides]](https://aliireza.github.io/files/flowmage-euromlsys24-slides.pdf)
 <br />
 <br />
-We use large language models (LLMs) to extract useful information from stateful network functions and find the optimal RSS configuration to minmize shared memory accesses.
 <br />
 
 - **Overcoming the IOTLB wall for multi-100-Gbps Linux-based networking ([PeerJ CS](https://peerj.com/computer-science/))**
@@ -67,9 +72,9 @@ We use large language models (LLMs) to extract useful information from stateful 
 <br />
 [[Paper]](https://aliireza.github.io/files/iotlb-peerj23.pdf)
 [[Reviews]](https://peerj.com/articles/cs-1385/reviews/)
+[[Netdev0x18]](https://netdevconf.info/0x18/sessions/talk/characterizing-iotlb-wall-for-multi-100-gbps-linux-based-networking.html)
 <br />
 <br />
-We (i) characterize the performance of IOMMU & IOTLB on recent Intel Xeon Scalable & AMD EPYC processors at 200 Gbps and (ii) explore the possible opportunities to mitigate its performance overheads in the Linux kernel. Our evaluation shows that using hugepage-backed buffers can completely recover up-to-20-percent throughput drop introduced by IOMMU. 
 <br />
 
 - **Packet Order Matters! Improving Application Performance by Deliberately Delaying Packets ([NSDI'22](https://www.usenix.org/conference/nsdi22))**
@@ -85,7 +90,7 @@ Hamid Ghasemirahni, Tom Barbette, Georgios Katsikas, **Alireza Farshin**, Massim
 [[Video]](https://www.usenix.org/conference/nsdi22/presentation/ghasemirahni)
 <br />
 <br />
-We systematically study the impact of temporal and spatial traffic locality on the performance of commodity servers equipped with high-speed network interfaces. Our results show that (i) the performance of a variety of widely deployed applications degrade substantially with even the slightest lack of traffic locality, and (ii) a traffic trace from our organization reveals poor traffic locality as networking protocols, drivers, and the underlying switching/routing fabric spread packets out in time (reducing locality). To address these issues, we built Reframer, a software solution that deliberately delays packets and reorders them to increase traffic locality. Despite introducing µs-scale delays of some packets, we show that Reframer increases the throughput of a network service chain by up to 84% and reduces the flow completion time of a web server by 11% while improving its throughput by 20%. This work has been featured in [Ericsson Blog](https://www.ericsson.com/en/blog/2022/8/packet-reordering-effects-on-packet-processing) and [KTH news](https://www.kth.se/en/om/nyheter/lokala-nyheter/kth-researchers-behind-breakthrough-set-to-halve-data-centre-energy-consumption-1.1176662).
+This work has been featured in [Ericsson Blog](https://www.ericsson.com/en/blog/2022/8/packet-reordering-effects-on-packet-processing) and [KTH news](https://www.kth.se/en/om/nyheter/lokala-nyheter/kth-researchers-behind-breakthrough-set-to-halve-data-centre-energy-consumption-1.1176662).
 <br />
 
 - **PacketMill: Toward per-core 100-Gbps Networking ([ASPLOS'21](https://asplos-conference.org/2021))**
@@ -102,7 +107,7 @@ We systematically study the impact of temporal and spatial traffic locality on t
 [[FOSDEM'21]](https://archive.fosdem.org/2021/schedule/event/sdn_fastclick/)
 <br />
 <br />
-We present [PacketMill](https://packetmill.github.io/), a system for optimizing software packet processing, which (i) introduces a new model to efficiently manage packet metadata and (ii) employs code-optimization techniques to better utilize commodity hardware. PacketMill grinds the whole packet processing stack, from the high-level network function configuration file to the low-level userspace network (specifically DPDK) drivers, to mitigate inefficiencies and produce a customized binary for a given network function. Our evaluation results show that PacketMill increases throughput (up to 36.4 Gbps - 70%) & reduces latency (up to 101 us - 28%) and enables nontrivial packet processing (e.g., router) at ≈100 Gbps, when new packets arrive >10× faster than main memory access times, while using only one processing core. This work has been featured in the [Ericsson Blog](https://www.ericsson.com/en/blog/2021/4/multi-hundred-gigabit-networking-commodity-hardware) and on [Twitter](https://twitter.com/ahmad_saeed/status/1398272965414952965?s=20&t=Kc04IQgUz6fdcqKCxMgqoQ).
+This work has been featured in the [Ericsson Blog](https://www.ericsson.com/en/blog/2021/4/multi-hundred-gigabit-networking-commodity-hardware) and on [Twitter](https://twitter.com/ahmad_saeed/status/1398272965414952965?s=20&t=Kc04IQgUz6fdcqKCxMgqoQ).
 <br />
 
 - **Reexamining Direct Cache Access to Optimize I/O Intensive Applications for Multi-hundred-gigabit Networks ([ATC'20](https://www.usenix.org/conference/atc20))**
@@ -117,7 +122,7 @@ We present [PacketMill](https://packetmill.github.io/), a system for optimizing 
 [[Video]](https://www.usenix.org/conference/atc20/presentation/farshin)
 <br />
 <br />
-We study the current implementation of Direct Cache Access (DCA) in Intel processors, called Data Direct I/O (DDIO) technology. Our paper shows that it is important to understand the details of DDIO and to tune/optimize it appropriately for a given Internet service to achieve high-performance, especially with the introduction of multi-hundred-gigabit networks. A preliminary version of this paper has been presented in the [EuroSys'20](https://www.eurosys2020.org/) poster session.
+A preliminary version of this paper has been presented in the [EuroSys'20](https://www.eurosys2020.org/) poster session.
 <br />
 
 - **Make the Most out of Last Level Cache in Intel Processors ([EuroSys'19](https://eurosys2019.org/))**
@@ -132,7 +137,7 @@ We study the current implementation of Direct Cache Access (DCA) in Intel proces
 [[Video]](https://se.inf.tu-dresden.de/eurosys2019/Video/26_3/Alireza%20Farshin.mov)
 <br />
 <br />
-We exploited the characteristics of non-uniform cache architecture (NUCA) in recent Intel processors to introduce a new memory management scheme. The results of our work showed that our proposed scheme could reduce the tail latencies in latency-critical Network Function Virtualization (NFV) service chains by 21.5%. Furthermore, our work demonstrated that optimizing the computer systems and taking advantage of nanosecond improvements could have a higher impact on the performance of networking applications. This work has been featured in the [Ericsson Blog](https://www.ericsson.com/en/blog/2019/3/maximizing-cots-hardware-performance-with-cpu-memory-management), [Tech Xplore](https://techxplore.com/news/2019-07-cache-intel-processors-packet.html), [AlphaGalileo](https://www.alphagalileo.org/en-gb/Item-Display/ItemId/180749?returnurl=https://www.alphagalileo.org/en-gb/Item-Display/ItemId/180749), [Twitter](https://twitter.com/matt_dz/status/1101137210152288257), [KTH main page](https://www.kth.se/en/aktuellt/nyheter/forskare-pa-g-1.890770), and [KTH EECS news](https://www.kth.se/en/eecs/nyheter/a-positive-side-effect-of-cache-monitoring-doing-good-rather-than-evil-1.912507).
+This work has been featured in the [Ericsson Blog](https://www.ericsson.com/en/blog/2019/3/maximizing-cots-hardware-performance-with-cpu-memory-management), [Tech Xplore](https://techxplore.com/news/2019-07-cache-intel-processors-packet.html), [AlphaGalileo](https://www.alphagalileo.org/en-gb/Item-Display/ItemId/180749?returnurl=https://www.alphagalileo.org/en-gb/Item-Display/ItemId/180749), [Twitter](https://twitter.com/matt_dz/status/1101137210152288257), [KTH main page](https://www.kth.se/en/aktuellt/nyheter/forskare-pa-g-1.890770), and [KTH EECS news](https://www.kth.se/en/eecs/nyheter/a-positive-side-effect-of-cache-monitoring-doing-good-rather-than-evil-1.912507).
 
 
 ---
