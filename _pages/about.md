@@ -7,7 +7,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am a distributed systems researcher at NVIDIA. Before joining NVIDIA, I was a senior researcher in the network intelligence unit at RISE. I completed my doctoral studies in the Network Systems Laboratory ([NSLab](https://www.kth.se/blogs/nslab/)) at KTH Royal Institute of Technology under the supervision of Professor [Dejan Kostic](https://dejankosticgithub.github.io/index.html) and Professor [Gerald Q. Maguire Jr.](https://people.kth.se/~maguire/) I have received my B.Sc. in Electrical Engineering (Electronics) from [Sharif University of Technology](http://www.en.sharif.edu/), Tehran, Iran and my M.Sc. in Electrical Engineering (Digital Electronic Systems) from [Amirkabir University of Technology](https://aut.ac.ir/en), Tehran, Iran.
+I am a distributed systems researcher at NVIDIA. I completed my doctoral studies in the Network Systems Laboratory ([NSLab](https://www.kth.se/blogs/nslab/)) at KTH Royal Institute of Technology under the supervision of Professor [Dejan Kostic](https://dejankosticgithub.github.io/index.html) and Professor [Gerald Q. Maguire Jr.](https://people.kth.se/~maguire/) I have received my B.Sc. in Electrical Engineering (Electronics) from [Sharif University of Technology](http://www.en.sharif.edu/), Tehran, Iran and my M.Sc. in Electrical Engineering (Digital Electronic Systems) from [Amirkabir University of Technology](https://aut.ac.ir/en), Tehran, Iran.
 
 
 For more information, please check my [résumé](https://aliireza.github.io/files/AlirezaFarshin_resume.pdf) or full [CV](https://aliireza.github.io/files/AlirezaFarshin_CV.pdf).
@@ -24,6 +24,16 @@ My research interests include computer networks and networked systems. During my
 
 Publications
 ======
+
+- **MLSynth: Towards Synthetic ML Traces ([NAIC'25](https://conferences.sigcomm.org/sigcomm/2025/workshop/naic/))**
+<br />
+Adel Sefiane, **Alireza Farshin**, Marios Kogias
+<br />
+[[Paper]](https://aliireza.github.io/files/mlsynth-naic25.pdf)
+[[GitHub Repository]](https://github.com/NetMLSim/MLSynth)
+<br />
+<br />
+<br />
 
 - **Deriving Coding-Specific Sub-Models from LLMs using Resource-Efficient Pruning ([LLM4Code'25](https://llm4code.github.io/))**
 <br />
