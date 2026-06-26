@@ -30,7 +30,7 @@ Publications
 Eldar Hasanov, Adel Sefiane, **Alireza Farshin**, Marios Kogias
 <br />
 [[Paper]](https://doi.org/10.1145/3820441.3820476)
-[[GitHub Repository]](https://github.com/eldarhasanov079/checkwork)
+[[GitHub Repository]](https://github.com/NetMLSim/checkwork)
 <br />
 <br />
 <br />
