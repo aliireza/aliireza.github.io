@@ -7,7 +7,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am a distributed systems researcher at NVIDIA. I completed my doctoral studies in the Network Systems Laboratory ([NSLab](https://www.kth.se/blogs/nslab/)) at KTH Royal Institute of Technology under the supervision of Professor [Dejan Kostic](https://dejankosticgithub.github.io/index.html) and Professor [Gerald Q. Maguire Jr.](https://people.kth.se/~maguire/) I have received my B.Sc. in Electrical Engineering (Electronics) from [Sharif University of Technology](http://www.en.sharif.edu/), Tehran, Iran and my M.Sc. in Electrical Engineering (Digital Electronic Systems) from [Amirkabir University of Technology](https://aut.ac.ir/en), Tehran, Iran.
+I am a distributed systems researcher at NVIDIA. I completed my doctoral studies in the Network Systems Laboratory ([NSLab](https://www.kth.se/blogs/nslab/)) at KTH Royal Institute of Technology under the supervision of Professor [Dejan Kostic](https://dejankosticgithub.github.io/index.html) and Professor [Gerald Q. Maguire Jr.](https://people.kth.se/~maguire/) I have received my B.Sc. in Electrical Engineering (Electronics) from [Sharif University of Technology](http://www.en.sharif.edu/), Tehran, Iran and my M.Sc. in Electrical Engineering (Digital Electronic Circuits) from [Amirkabir University of Technology](https://aut.ac.ir/en), Tehran, Iran.
 
 
 For more information, please check my [résumé](https://aliireza.github.io/files/AlirezaFarshin_resume.pdf) or full [CV](https://aliireza.github.io/files/AlirezaFarshin_CV.pdf).
@@ -24,6 +24,25 @@ My research interests include computer networks and networked systems. During my
 
 Publications
 ======
+
+- **CheckWork: Enabling Trace-Driven Analysis of Checkpointing Overhead in Distributed ML Training ([APNet'26](https://conferences.sigcomm.org/events/apnet2026/))**
+<br />
+Eldar Hasanov, Adel Sefiane, **Alireza Farshin**, Marios Kogias
+<br />
+[[Paper]](https://doi.org/10.1145/3820441.3820476)
+[[GitHub Repository]](https://github.com/eldarhasanov079/checkwork)
+<br />
+<br />
+<br />
+
+- **Aggregate Local, Sync Global: A Hierarchical Approach to Efficient Geo-Distributed LLM Training ([NetCompute'26](https://netcompute.org/))**
+<br />
+Francesco De Luca, Francesco De Nadai, Mariano Scazzariello, Tommaso Caiazzi, **Alireza Farshin**, Marco Chiesa, Giuseppe Di Battista
+<br />
+[[Paper]](https://aliireza.github.io/files/hierarchical-dp-netcompute26.pdf)
+<br />
+<br />
+<br />
 
 - **MLSynth: Towards Synthetic ML Traces ([NAIC'25](https://conferences.sigcomm.org/sigcomm/2025/workshop/naic/))**
 <br />
