@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ site.author.name }}</title>
+  <meta name="description" content="{{ site.description }}" />
+  <!-- Favicon -->
+  <link rel="icon" href="/images/favicon/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon-180x180.png" />
+  <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#1d5fba" />
+  <link rel="manifest" href="/images/favicon/manifest.json" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400&family=Source+Sans+3:ital,wght@0,300..700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --text: #1a1a1a;
+      --muted: #555;
+      --accent: #1d5fba;
+      --accent-light: #e8f0fb;
+      --accent-dark: #164a92;
+      --accent-mid: #cad9f5;
+      --border: #e5e5e5;
+      --bg: #fff;
+      --nav-h: 56px;
+      --sans: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      --serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+
+      /* Type scale — 18px base, Major Third (1.25) */
+      --fs-sm:   0.889rem;  /* 16px  metadata */
+      --fs-base: 1rem;      /* 18px  body */
+      --fs-md:   1.125rem;  /* 20px  paper titles */
+      --fs-lg:   1.556rem;  /* 28px  section headings */
+      --fs-xl:   2.444rem;  /* 44px  name */
+    }
+
+    /* 18px root: above the 16px accessibility floor, rem-based so it
+       respects the reader's browser font-size preference. */
+    html {
+      font-size: 18px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--sans);
+      font-size: var(--fs-base);
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ── Navigation ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-name {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: var(--fs-md);
+      color: var(--text);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      margin-left: auto;
+    }
+
+    .nav-links a {
+      font-size: var(--fs-sm);
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    /* ── Main layout ── */
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    /* ── Profile section ── */
+    #about {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 48px;
+      align-items: start;
+      padding: 64px 0 56px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .profile-photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+      filter: grayscale(10%);
+    }
+
+    .profile-text h1 {
+      font-family: var(--serif);
+      font-size: var(--fs-xl);
+      font-weight: 500;
+      line-height: 1.1;
+      letter-spacing: -0.015em;
+      margin-bottom: 8px;
+    }
+
+    .profile-tagline {
+      font-family: var(--serif);
+      font-style: italic;
+      color: var(--muted);
+      font-size: var(--fs-md);
+      margin-bottom: 16px;
+    }
+
+    .profile-meta {
+      font-size: var(--fs-sm);
+      color: var(--muted);
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .profile-meta span { display: flex; align-items: center; gap: 6px; }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: var(--fs-sm);
+      color: var(--accent);
+      text-decoration: none;
+      padding: 6px 13px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      transition: all 0.15s;
+    }
+
+    .social-links a svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+
+    .social-links a:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .cv-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .cv-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: var(--fs-sm);
+      font-weight: 500;
+      color: #fff;
+      background: var(--accent);
+      text-decoration: none;
+      padding: 7px 15px;
+      border-radius: 6px;
+      transition: background 0.15s;
+    }
+
+    .cv-links a svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+
+    .cv-links a:hover { background: var(--accent-dark); }
+
+    /* ── Sections ── */
+    section {
+      padding: 56px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:last-child { border-bottom: none; }
+
+    section h2 {
+      font-family: var(--serif);
+      font-size: var(--fs-lg);
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin-bottom: 28px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+    }
+
+    /* ── About / Research text ── */
+    .prose { max-width: 100%; }
+
+    .prose p {
+      margin-bottom: 1rem;
+      color: var(--text);
+      font-size: var(--fs-base);
+    }
+
+    .prose a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
+    .prose a:hover { border-bottom-color: var(--accent); }
+
+    /* ── Current research topics ── */
+    .topic-list {
+      list-style: none;
+      margin: 0 0 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .topic-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: var(--fs-base);
+      color: var(--text);
+    }
+
+    .topic-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 0.68em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    /* ── Embedded video ── */
+    .video-wrap {
+      margin: 28px auto 0;
+      max-width: 640px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+
+    .video-wrap iframe {
+      width: 100%;
+      display: block;
+      border: none;
+    }
+
+    /* ── Students ── */
+    .student-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .student-list li {
+      border-left: 2px solid var(--border);
+      padding-left: 16px;
+    }
+
+    .student-name {
+      font-family: var(--serif);
+      font-size: var(--fs-md);
+      font-weight: 600;
+      line-height: 1.35;
+      margin-bottom: 2px;
+    }
+
+    .student-name a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+
+    .student-name a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    .student-meta {
+      font-size: var(--fs-sm);
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .student-meta a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+
+    .student-meta a:hover { border-bottom-color: var(--accent); }
+
+    /* ── Publications ── */
+    .pub-list {
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+
+    .pub {
+      display: grid;
+      grid-template-columns: 48px 210px 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    /* Separator + year label at the start of each year group */
+    .pub.year-start {
+      border-top: 1px solid var(--border);
+      padding-top: 30px;
+      margin-top: 2px;
+    }
+
+    .pub-list > .pub.year-start:first-child {
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
+    }
+
+    .pub-year {
+      font-size: var(--fs-sm);
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: -0.01em;
+      padding-top: 1px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .pub-thumb {
+      width: 210px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+      background: #fafafa;
+      display: block;
+      transition: box-shadow 0.15s, transform 0.15s;
+    }
+
+    .pub-thumb:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+      transform: translateY(-2px);
+    }
+
+    .pub-thumb img {
+      width: 100%;
+      display: block;
+    }
+
+    .pub-content { min-width: 0; }
+
+    .pub-title {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: var(--fs-md);
+      line-height: 1.35;
+      letter-spacing: -0.005em;
+      margin-bottom: 5px;
+    }
+
+    .pub-title a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .pub-title a:hover { color: var(--accent); }
+
+    .pub-venue {
+      font-size: var(--fs-sm);
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .pub-venue a { color: var(--muted); text-decoration: none; border-bottom: 1px dashed var(--border); }
+    .pub-venue a:hover { color: var(--accent); border-color: var(--accent); }
+
+    .pub-authors {
+      font-size: var(--fs-sm);
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .pub-authors strong { color: var(--text); font-weight: 500; }
+
+    .pub-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+
+    .badge {
+      font-size: 0.778rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: #fff3cd;
+      color: #856404;
+    }
+
+    .badge.award { background: #fff3cd; color: #856404; }
+
+    .pub-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    .pub-links a {
+      font-size: 0.833rem;
+      color: var(--accent);
+      text-decoration: none;
+      padding: 2px 8px;
+      background: var(--accent-light);
+      border-radius: 4px;
+      transition: background 0.15s;
+    }
+
+    .pub-links a:hover { background: var(--accent-mid); }
+
+    .pub-note {
+      font-size: 0.833rem;
+      color: var(--muted);
+      margin-top: 6px;
+      font-style: italic;
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 24px;
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    footer p { font-size: var(--fs-sm); color: var(--muted); }
+
+    footer .footer-links { display: flex; gap: 16px; }
+    footer .footer-links a { font-size: var(--fs-sm); color: var(--muted); text-decoration: none; }
+    footer .footer-links a:hover { color: var(--accent); }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      #about {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 40px 0 40px;
+      }
+
+      .profile-photo { width: 120px; height: 120px; }
+
+      .pub { grid-template-columns: 1fr; gap: 8px; }
+      .pub-year { font-size: var(--fs-sm); padding-top: 0; }
+      .pub-thumb { width: 100%; max-width: 320px; }
+
+      .nav-links { gap: 14px; }
+      .nav-links li:nth-child(n+6) { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="#about" class="nav-name">{{ site.author.name }}</a>
+      <ul class="nav-links">
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#students">Students</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#personal">Personal</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ── Profile ── -->
+    <div id="about">
+      <img class="profile-photo"
+           src="/images/aliireza.jpg"
+           alt="Alireza Farshin" />
+      <div class="profile-text">
+        <h1>Alireza Farshin</h1>
+        <p class="profile-tagline">Distributed Systems Researcher @ NVIDIA</p>
+        <div class="profile-meta">
+          <span>📍 {{ site.author.location }}</span>
+        </div>
+        <div class="social-links">
+          <a href="https://scholar.google.com/citations?user=cfCpKWwAAAAJ&hl=en" title="Google Scholar">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+            Google Scholar
+          </a>
+          <a href="https://www.linkedin.com/in/alireza-farshin" title="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/aliireza" title="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            GitHub
+          </a>
+          <a href="https://twitter.com/alirezafarshin" title="X / Twitter">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            X
+          </a>
+          <a href="https://orcid.org/0000-0001-5083-4052" title="ORCID">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg>
+            ORCID
+          </a>
+        </div>
+        <div class="cv-links">
+          <a href="/files/AlirezaFarshin_CV.pdf" download>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.577l-3.539-3.538.708-.72 2.331 2.332V4h1v9.651l2.332-2.332.707.72L12 15.577zM5 20v-5h1v4h12v-4h1v5H5z"/></svg>
+            Full CV
+          </a>
+          <a href="/files/AlirezaFarshin_resume.pdf" download>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.577l-3.539-3.538.708-.72 2.331 2.332V4h1v9.651l2.332-2.332.707.72L12 15.577zM5 20v-5h1v4h12v-4h1v5H5z"/></svg>
+            Résumé
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── About / Bio ── -->
+    <!-- ── Research ── -->
+    <section id="about-me">
+      <h2>About Me</h2>
+      <div class="prose">
+        <p>I am a distributed systems researcher at NVIDIA. Before joining NVIDIA, I was a senior researcher at <a href="https://www.ri.se/en">RISE Research Institutes of Sweden</a> and a postdoctoral researcher in the Network Systems Laboratory (<a href="https://www.kth.se/blogs/nslab/">NSLab</a>) at KTH Royal Institute of Technology, where I also completed my doctoral studies under the supervision of Professor <a href="https://dejankosticgithub.github.io/index.html">Dejan Kostić</a> and Professor <a href="https://people.kth.se/~maguire/">Gerald Q. Maguire Jr.</a> I received my B.Sc. in Electrical Engineering (Electronics) from <a href="http://www.en.sharif.edu/">Sharif University of Technology</a>, Tehran, Iran, and my M.Sc. in Electrical Engineering (Digital Electronic Circuits) from <a href="https://aut.ac.ir/en">Amirkabir University of Technology</a>, Tehran, Iran.</p>
+
+        <p>My research interests include computer networks and networked systems. I currently work on:</p>
+
+        <ul class="topic-list">
+          <li>Next-generation programmable NICs</li>
+          <li>Network simulation for AI/ML workloads</li>
+          <li>Code generation using LLMs</li>
+        </ul>
+
+        <p>During my doctoral studies, I improved the performance of Network Functions Virtualization (NFV) service chains running at 100/200 Gbps by using low-level optimization techniques. I received a <a href="https://research.google/outreach/phd-fellowship/recipients/?category=2021">2021 Google Ph.D. Fellowship</a> in Systems and Networking — see <a href="https://intra.kth.se/en/eecs/aktuellt-pa-eecs/nyheter/vinnare-av-google-phd-fellowship-2021-1.1104113">my interview</a> with KTH EECS. You can read more in my <a href="http://kth.diva-portal.org/smash/record.jsf?pid=diva2%3A1305108&dswid=947">licentiate thesis</a> and <a href="http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-323599">doctoral dissertation</a>. To read the highlight of my research in Swedish, please check the <a href="https://framtidensforskning.se/2022/06/17/optimerar-cacheminnet-for-snabbare-internettjanster/">Framtidens Forskning</a> article "Optimerar cacheminnet för snabbare internettjänster".</p>
+        <div class="video-wrap">
+          <iframe width="560" height="315"
+                  src="https://www.youtube.com/embed/A7A4nEXrm3s"
+                  title="Research talk"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Students ── -->
+    <section id="students">
+      <h2>Students</h2>
+      <ul class="student-list">
+        <li>
+          <div class="student-name">
+            <a href="https://www.linkedin.com/in/adel-sefiane-3a19971b1/">Adel Sefiane</a>
+          </div>
+          <div class="student-meta">Industrial doctoral student · NVIDIA &amp; Imperial College London · August 2024–Present</div>
+          <div class="student-meta">Co-advised with <a href="https://marioskogias.github.io/">Marios Kogias</a></div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ── Publications ── -->
+    <section id="publications">
+      <h2>Publications</h2>
+      <div class="pub-list">
+
+        <div class="pub year-start">
+          <div class="pub-year">2026</div>
+          <a class="pub-thumb" href="/files/checkwork-apnet26.pdf"><img src="/images/papers/checkwork-apnet26.jpg" alt="CheckWork first page" loading="lazy" /></a>
+          <div class="pub-content">
+            <div class="pub-title"><a href="/files/checkwork-apnet26.pdf">CheckWork: Enabling Trace-Driven Analysis of Checkpointing Overhead in Distributed ML Training</a></div>
+            <div class="pub-venue"><a href="https://conferences.sigcomm.org/events/apnet2026/">APNet'26</a></div>
+            <div class="pub-authors">Eldar Hasanov, Adel Sefiane, <strong>Alireza Farshin</strong>, Marios Kogias</div>
+            <div class="pub-links">
+              <a href="/files/checkwork-apnet26.pdf">Paper</a>
+              <a href="https://doi.org/10.1145/3820441.3820476">DOI</a>
+              <a href="https://github.com/NetMLSim/checkwork">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="pub-year"></div>
+          <a class="pub-thumb" href="/files/hierarchical-dp-netcompute26.pdf"><img src="/images/papers/hierarchical-dp-netcompute26.jpg" alt="Aggregate Local, Sync Global first page" loading="lazy" /></a>
+          <div class="pub-content">
+            <div class="pub-title"><a href="/files/hierarchical-dp-netcompute26.pdf">Aggregate Local, Sync Global: A Hierarchical Approach to Efficient Geo-Distributed LLM Training</a></div>
+            <div class="pub-venue"><a href="https://netcompute.org/">NetCompute'26</a></div>
+            <div class="pub-authors">Francesco De Luca, Francesco De Nadai, Mariano Scazzariello, Tommaso Caiazzi, <strong>Alireza Farshin</strong>, Marco Chiesa, Giuseppe Di Battista</div>
+            <div class="pub-links">
+              <a href="/files/hierarchical-dp-netcompute26.pdf">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub year-start">
+          <div class="pub-year">2025</div>
+          <a class="pub-thumb" href="/files/mlsynth-naic25.pdf"><img src="/images/papers/mlsynth-naic25.jpg" alt="MLSynth first page" loading="lazy" /></a>
+          <div class="pub-content">
+            <div class="pub-title"><a href="/files/mlsynth-naic25.pdf">MLSynth: Towards Synthetic ML Traces</a></div>
+            <div class="pub-venue"><a href="https://conferences.sigcomm.org/sigcomm/2025/workshop/naic/">NAIC'25</a></div>
+            <div class="pub-authors">Adel Sefiane, <strong>Alireza Farshin</strong>, Marios Kogias</div>
+            <div class="pub-links">
+              <a href="/files/mlsynth-naic25.pdf">Paper</a>
+              <a href="https://github.com/NetMLSim/MLSynth">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="pub-year"></div>
+          <a class="pub-thumb" href="/files/pruning-llm4code25.pdf"><img src="/images/papers/pruning-llm4code25.jpg" alt="Coding-Specific Sub-Models first page" loading="lazy" /></a>
+          <div class="pub-content">
+            <div class="pub-title"><a href="/files/pruning-llm4code25.pdf">Deriving Coding-Specific Sub-Models from LLMs using Resource-Efficient Pruning</a></div>
+            <div class="pub-venue"><a href="https://llm4code.github.io/">LLM4Code'25</a></div>
+            <div class="pub-authors">Laura Puccioni, <strong>Alireza Farshin</strong>, Mariano Scazzariello, Changjie Wang, Marco Chiesa, Dejan Kostić</div>
+            <div class="pub-links">
+              <a href="/files/pruning-llm4code25.pdf">Paper</a>
+              <a href="https://arxiv.org/abs/2501.05248">arXiv</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub year-start">
+          <div class="pub-year">2024</div>
+          <a class="pub-thumb" href="/files/fajita-conext24.pdf"><img src="/images/papers/fajita-conext24.jpg" alt="FAJITA first page" loading="lazy" /></a>
+          <div class="pub-content">
+            <div class="pub-title"><a href="/files/fajita-conext24.pdf">FAJITA: Stateful Packet Processing at 100 Million pps</a></div>
+            <div class="pub-venue"><a href="https://conferences.sigcomm.org/co-next/2024/#!/home">CoNEXT'24</a></div>
+            <div class="pub-authors">Hamid Ghasemirahni, <strong>Alireza Farshin</strong>, Mariano Scazzariello, Gerald Q. Maguire Jr., Dejan Kostić, Marco Chiesa</div>
+            <div class="pub-links">
+              <a href="/files/fajita-conext24.pdf">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="pub-year"></div>
+          <a class="pub-thumb" href="/files/netconfeval-conext24.pdf"><img src="/images/papers/netconfeval-conext24.jpg" alt="NetConfEval first page" loading="lazy" /></a>
+          <div class="pub-content">
+            <div class="pub-title"><a href="/files/netconfeval-conext24.pdf">NetConfEval: Can LLMs Facilitate Network Configuration?</a></div>
+            <div class="pub-venue"><a href="https://conferences.sigcomm.org/co-next/2024/#!/home">CoNEXT'24</a></div>
+            <div class="pub-authors">Changjie Wang, Mariano Scazzariello, <strong>Alireza Farshin</strong>, Simone Ferlin, Dejan Kostić, Marco Chiesa</div>
+            <div class="pub-badges">
+              <span class="badge award">🏅 IRTF/IETF ANRP 2025 Winner</span>
+            </div>
+            <div class="pub-links">
+              <a href="/files/netconfeval-conext24.pdf">Paper</a>
+              <a href="https://github.com/NetConfEval/NetConfEval">GitHub</a>
+              <a href="https://huggingface.co/datasets/NetConfEval/NetConfEval">Dataset</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="pub-year"></div>
+          <a class="pub-thumb" href="/files/flowmage-euromlsys24.pdf"><img src="/images/papers/flowmage-euromlsys24.jpg" alt="FlowMage first page" loading="lazy" /></a>
+          <div class="pub-content">
+            <div class="pub-title"><a href="/files/flowmage-euromlsys24.pdf">Deploying Stateful Network Functions Efficiently using Large Language Models</a></div>
+            <div class="pub-venue"><a href="https://euromlsys.eu/">EuroMLSys'24</a></div>
+            <div class="pub-authors">Hamid Ghasemirahni, <strong>Alireza Farshin</strong>, Mariano Scazzariello, Marco Chiesa, Dejan Kostić</div>
+            <div class="pub-links">
+              <a href="/files/flowmage-euromlsys24.pdf">Paper</a>
+              <a href="/files/flowmage-euromlsys24-slides.pdf">Slides</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub year-start">
+          <div class="pub-year">2023</div>
+          <a class="pub-thumb" href="/files/iotlb-peerj23.pdf"><img src="/images/papers/iotlb-peerj23.jpg" alt="IOTLB wall first page" loading="lazy" /></a>
+          <div class="pub-content">
+            <div class="pub-title"><a href="/files/iotlb-peerj23.pdf">Overcoming the IOTLB wall for multi-100-Gbps Linux-based networking</a></div>
+            <div class="pub-venue"><a href="https://peerj.com/computer-science/">PeerJ CS</a></div>
+            <div class="pub-authors"><strong>Alireza Farshin</strong>, Luigi Rizzo, Khaled Elmeleegy, Dejan Kostić</div>
+            <div class="pub-links">
+              <a href="/files/iotlb-peerj23.pdf">Paper</a>
+              <a href="https://peerj.com/articles/cs-1385/reviews/">Reviews</a>
+              <a href="https://netdevconf.info/0x18/sessions/talk/characterizing-iotlb-wall-for-multi-100-gbps-linux-based-networking.html">Netdev0x18</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub year-start">
+          <div class="pub-year">2022</div>
+          <a class="pub-thumb" href="/files/ordermatters-nsdi22.pdf"><img src="/images/papers/ordermatters-nsdi22.jpg" alt="Packet Order Matters first page" loading="lazy" /></a>
+          <div class="pub-content">
+            <div class="pub-title"><a href="/files/ordermatters-nsdi22.pdf">Packet Order Matters! Improving Application Performance by Deliberately Delaying Packets</a></div>
+            <div class="pub-venue"><a href="https://www.usenix.org/conference/nsdi22">NSDI'22</a> · Acceptance Rate (Spring): 28/104 ≈ 26.9%</div>
+            <div class="pub-authors">Hamid Ghasemirahni, Tom Barbette, Georgios Katsikas, <strong>Alireza Farshin</strong>, Massimo Girondi, Amir Roozbeh, Marco Chiesa, Gerald Q. Maguire Jr., Dejan Kostić</div>
+            <div class="pub-badges">
+              <span class="badge award">🏅 Community Award Winner</span>
+            </div>
+            <div class="pub-links">
+              <a href="/files/ordermatters-nsdi22.pdf">Paper</a>
+              <a href="https://www.usenix.org/system/files/nsdi22_slides_ghasemirahni.pdf">Slides</a>
+              <a href="https://www.usenix.org/conference/nsdi22/presentation/ghasemirahni">Video</a>
+            </div>
+            <p class="pub-note">Featured in <a href="https://www.ericsson.com/en/blog/2022/8/packet-reordering-effects-on-packet-processing">Ericsson Blog</a> and <a href="https://www.kth.se/en/om/nyheter/lokala-nyheter/kth-researchers-behind-breakthrough-set-to-halve-data-centre-energy-consumption-1.1176662">KTH news</a>.</p>
+          </div>
+        </div>
+
+        <div class="pub year-start">
+          <div class="pub-year">2021</div>
+          <a class="pub-thumb" href="/files/packetmill-asplos21.pdf"><img src="/images/papers/packetmill-asplos21.jpg" alt="PacketMill first page" loading="lazy" /></a>
+          <div class="pub-content">
+            <div class="pub-title"><a href="/files/packetmill-asplos21.pdf">PacketMill: Toward per-core 100-Gbps Networking</a></div>
+            <div class="pub-venue"><a href="https://asplos-conference.org/2021">ASPLOS'21</a> · Acceptance Rate: 75/398 ≈ 18.8%</div>
+            <div class="pub-authors"><strong>Alireza Farshin</strong>, Tom Barbette, Amir Roozbeh, Gerald Q. Maguire Jr., Dejan Kostić</div>
+            <div class="pub-links">
+              <a href="/files/packetmill-asplos21.pdf">Paper</a>
+              <a href="/files/packetmill-asplos21-extended_abstract.pdf">Extended Abstract</a>
+              <a href="/files/packetmill-asplos21-slides.pdf">Slides</a>
+              <a href="https://play.kth.se/media/PacketMillA+Toward+Per-Core+100-Gbps+Networking/0_7rvtusfo">Video</a>
+              <a href="https://packetmill.github.io/">Webpage</a>
+              <a href="https://archive.fosdem.org/2021/schedule/event/sdn_fastclick/">FOSDEM'21</a>
+            </div>
+            <p class="pub-note">Featured in <a href="https://www.ericsson.com/en/blog/2021/4/multi-hundred-gigabit-networking-commodity-hardware">Ericsson Blog</a>.</p>
+          </div>
+        </div>
+
+        <div class="pub year-start">
+          <div class="pub-year">2020</div>
+          <a class="pub-thumb" href="/files/ddio-atc20.pdf"><img src="/images/papers/ddio-atc20.jpg" alt="Direct Cache Access first page" loading="lazy" /></a>
+          <div class="pub-content">
+            <div class="pub-title"><a href="/files/ddio-atc20.pdf">Reexamining Direct Cache Access to Optimize I/O Intensive Applications for Multi-hundred-gigabit Networks</a></div>
+            <div class="pub-venue"><a href="https://www.usenix.org/conference/atc20">ATC'20</a> · Acceptance Rate: 65/348 ≈ 18.6%</div>
+            <div class="pub-authors"><strong>Alireza Farshin</strong>, Amir Roozbeh, Gerald Q. Maguire Jr., Dejan Kostić</div>
+            <div class="pub-links">
+              <a href="/files/ddio-atc20.pdf">Paper</a>
+              <a href="/files/ddio-atc20-slides.pdf">Slides</a>
+              <a href="http://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1426845&dswid=5214">Poster</a>
+              <a href="https://www.usenix.org/conference/atc20/presentation/farshin">Video</a>
+            </div>
+            <p class="pub-note">A preliminary version was presented at the <a href="https://www.eurosys2020.org/">EuroSys'20</a> poster session.</p>
+          </div>
+        </div>
+
+        <div class="pub year-start">
+          <div class="pub-year">2019</div>
+          <a class="pub-thumb" href="/files/slice-aware-eurosys19.pdf"><img src="/images/papers/slice-aware-eurosys19.jpg" alt="Last Level Cache first page" loading="lazy" /></a>
+          <div class="pub-content">
+            <div class="pub-title"><a href="/files/slice-aware-eurosys19.pdf">Make the Most out of Last Level Cache in Intel Processors</a></div>
+            <div class="pub-venue"><a href="https://eurosys2019.org/">EuroSys'19</a> · Acceptance Rate: 45/207 ≈ 21.7%</div>
+            <div class="pub-authors"><strong>Alireza Farshin</strong>, Amir Roozbeh, Gerald Q. Maguire Jr., Dejan Kostić</div>
+            <div class="pub-links">
+              <a href="/files/slice-aware-eurosys19.pdf">Paper</a>
+              <a href="/files/slice-aware-eurosys19-slides.pdf">Slides</a>
+              <a href="/files/slice-aware-eurosys19-poster.pdf">Poster</a>
+              <a href="https://se.inf.tu-dresden.de/eurosys2019/Video/26_3/Alireza%20Farshin.mov">Video</a>
+            </div>
+            <p class="pub-note">Featured in <a href="https://www.ericsson.com/en/blog/2019/3/maximizing-cots-hardware-performance-with-cpu-memory-management">Ericsson Blog</a>, <a href="https://techxplore.com/news/2019-07-cache-intel-processors-packet.html">Tech Xplore</a>, <a href="https://www.alphagalileo.org/en-gb/Item-Display/ItemId/180749">AlphaGalileo</a>, <a href="https://www.kth.se/en/aktuellt/nyheter/forskare-pa-g-1.890770">KTH</a>, and <a href="https://www.kth.se/en/eecs/nyheter/a-positive-side-effect-of-cache-monitoring-doing-good-rather-than-evil-1.912507">KTH EECS</a>.</p>
+          </div>
+        </div>
+
+      </div><!-- /pub-list -->
+    </section>
+
+    <!-- ── Personal ── -->
+    <section id="personal">
+      <h2>Personal</h2>
+      <div class="prose">
+        <p>In my free time, I play chess, piano, and bass guitar. I am trying to teach myself to compose minimal music — check my <a href="https://soundcloud.com/alireza-farshin/sets/stockholm-stories">SoundCloud playlist</a>.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© {{ 'now' | date: "%Y" }} Alireza Farshin</p>
+    <div class="footer-links">
+      <a href="https://github.com/aliireza">GitHub</a>
+      <a href="/feed.xml">Feed</a>
+      <a href="/sitemap.xml">Sitemap</a>
+    </div>
+  </footer>
+
+</body>
+</html>

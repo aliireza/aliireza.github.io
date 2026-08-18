@@ -1,31 +1,58 @@
-A Github Pages template for academic websites. This was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License. See LICENSE.md.
+# aliireza.github.io
 
-I think I've got things running smoothly and fixed some major bugs, but feel free to file issues or make pull requests if you want to improve the generic template / theme.
+Source for [aliireza.github.io](https://aliireza.github.io) — a single-page academic homepage
+built with Jekyll and hosted on GitHub Pages.
 
-### Note: if you are using this repo and now get a notification about a security vulnerability, delete the Gemfile.lock file. 
+## Where things live
 
-# Instructions
+| What | Where |
+|---|---|
+| All page content (bio, research, students, publications) | `_layouts/modern.html` |
+| Site metadata, author links | `_config.yml` |
+| Paper PDFs, CV, résumé | `files/` |
+| Paper thumbnails (generated) | `images/papers/` |
+| Favicons | `images/favicon/` |
+| 404 page | `_pages/404.md` |
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this repository](https://github.com/academicpages/academicpages.github.io) by clicking the "fork" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+`_pages/about.md` only supplies the `/` permalink and redirects — its body is not rendered.
+Edit `_layouts/modern.html` instead.
 
-See more info at https://academicpages.github.io/
+## Adding a publication
 
-## To run locally (not on GitHub Pages, to serve on your own computer)
+1. Drop the PDF in `files/` using the slug convention `<project>-<venue><yy>.pdf`
+   (e.g. `packetmill-asplos21.pdf`).
+2. Add that slug to the `SLUGS` list in `tools/make-thumbs.sh`.
+3. Run `./tools/make-thumbs.sh` to render the thumbnail.
+4. Add the entry to the publications list in `_layouts/modern.html`.
 
-1. Clone the repository and made updates as detailed above
-1. Make sure you have ruby-dev, bundler, and nodejs installed: `sudo apt install ruby-dev ruby-bundler nodejs`
-1. Run `bundle clean` to clean up the directory (no need to run `--force`)
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-1. Run `bundle exec jekyll liveserve` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
+The thumbnail script renders page 1 of each PDF, cropped to the top of the page.
 
-# Changelog -- bugfixes and enhancements
+Requires `poppler` and `imagemagick`:
 
-There is one logistical issue with a ready-to-fork template theme like academic pages that makes it a little tricky to get bug fixes and updates to the core theme. If you fork this repository, customize it, then pull again, you'll probably get merge conflicts. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch. 
+```bash
+brew install poppler imagemagick
+```
 
-To support this, all changes to the underlying code appear as a closed issue with the tag 'code change' -- get the list [here](https://github.com/academicpages/academicpages.github.io/issues?q=is%3Aclosed%20is%3Aissue%20label%3A%22code%20change%22%20). Each issue thread includes a comment linking to the single commit or a diff across multiple commits, so those with forked repositories can easily identify what they need to patch.
+## Running locally
+
+Jekyll 3.9 (pinned by GitHub Pages) is incompatible with Ruby 3.2+, which removed
+`String#tainted?`. Use Ruby 3.1:
+
+```bash
+rbenv install 3.1.6
+rbenv local 3.1.6
+bundle install
+bundle exec jekyll serve
+```
+
+Then open <http://localhost:4000>.
+
+## Credits
+
+Originally based on [AcademicPages](https://github.com/academicpages/academicpages.github.io),
+forked from the [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) Jekyll theme
+(© 2016 Michael Rose, MIT License — see `LICENSE`).
+
+The site was redesigned in August 2026 with the help of
+[Claude](https://claude.ai): the legacy theme was replaced with a self-contained
+single-page layout, and the remaining unused template files were removed.
